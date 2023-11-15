@@ -29,29 +29,35 @@ public class Jyanken_Chapter24 {
 		return Random;
 	}
 	
-	public void playGame() {
+	public void playGame( String getMyChoice, String getRandom) {
 		HashMap<String,String> choiceMap =new HashMap<String,String>();
 		
 		choiceMap.put("r", "グー");
 		choiceMap.put("s", "チョキ");
 		choiceMap.put("p", "パー");
 		
-		System.out.println("自分の手は" + choiceMap.get(getMyChoice()));
-		System.out.println("相手の手は" + choiceMap.get(getRandom()));
+		System.out.println("自分の手は" + choiceMap.get(getMyChoice));
+		System.out.println("相手の手は" + choiceMap.get(getRandom));
 		
-		if(getMyChoice() == getRandom()) {
+		if(choiceMap.get(getMyChoice) == choiceMap.get(getRandom)) {
 			System.out.println("あいこです");
-		}else if((getMyChoice()=="r")&&(getRandom()=="s")){
+		}
+		if(choiceMap.get(getMyChoice)=="r" && choiceMap.get(getRandom)=="s") {
 			System.out.println("自分の勝ちです");
-		}else if((getMyChoice()=="r")&&(getRandom()=="p")) {
+		}
+		if(choiceMap.get(getMyChoice)=="r"&&choiceMap.get(getRandom)=="p") {
 			System.out.println("自分の負けです");
-		}else if((getMyChoice()=="s")&&(getRandom()=="r")) {
+		}
+		if(choiceMap.get(getMyChoice)=="s"&&choiceMap.get(getRandom)=="r") {
 			System.out.println("自分の負けです");
-		}else if((getMyChoice()=="s")&&(getRandom()=="p")) {
+		}
+		if(choiceMap.get(getMyChoice)=="s"&&choiceMap.get(getRandom)=="p") {
 			System.out.println("自分の勝ちです");
-		}else if((getMyChoice()=="p")&&(getRandom()=="r")) {
+		}
+		if(choiceMap.get(getMyChoice)=="p"&&choiceMap.get(getRandom)=="r") {
 			System.out.println("自分の勝ちです");
-		}else if((getMyChoice()=="p")&&(getRandom()=="s")) {
+		}
+		if(choiceMap.get(getMyChoice)=="p"&&choiceMap.get(getRandom)=="s") {
 			System.out.println("自分の負けです");
 		}
 	}
